@@ -14,7 +14,7 @@
   <h1 align="center" id="readme-top">CashFlow</h3>
 
   <p align="center">
-    CashFlow is an expense tracker app designed to help individuals manage their expenses and financial activities effectively. This documentation provides an overview of the app's features, setup instructions, usage guidelines, API documentation, deployment process, and more.
+    CashFlow is an expense tracker app designed to help individuals manage their expenses and financial activities effectively. This documentation provides an overview of the app's features, setup instructions and deployment process.
   </p>
 </div>
 
