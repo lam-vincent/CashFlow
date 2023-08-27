@@ -31,28 +31,24 @@
    - [Budgeting](#budgeting)
    - [Transaction History](#transaction-history)
    - [Analytics](#analytics)
-3. [API Documentation](#api-documentation)
-4. [Deployment](#deployment)
+3. [Deployment](#deployment)
    - [Frontend Deployment](#frontend-deployment)
    - [Backend Deployment](#backend-deployment)
-5. [Testing](#testing)
-6. [Troubleshooting](#troubleshooting)
-7. [Contributing](#contributing)
-8. [License](#license)
+4. [License](#license)
 
 ## Setup
 
 ### Frontend Setup
 
 1. Clone the repository: `git clone <repository-url>`
-2. Navigate to the frontend directory: `cd expense-tracker-frontend`
+2. Navigate to the frontend directory: `cd web`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm run dev`
 
 ### Backend Setup
 
 1. Clone the repository: `git clone <repository-url>`
-2. Navigate to the backend directory: `cd expense-tracker-backend`
+2. Navigate to the backend directory: `cd api`
 3. Install dependencies: `npm install`
 4. Configure environment variables: Create a `.env` file based on the provided `.env.example`.
 5. Start the backend server: `npm start`
@@ -60,7 +56,7 @@
 ### Database Setup
 
 1. Prisma Configuration: Configure the Prisma `.env` file with your database connection details.
-2. Run Migrations: Use `npx prisma migrate dev` to apply database migrations.
+2. Run Migrations: Use `npx prisma db push` to apply database migrations.
 
 ## Features and Usage
 
@@ -73,7 +69,7 @@
 ### Dashboard
 
 - The dashboard displays the user's financial overview, including balance, expenses, and income.
-- Graphs visualize financial trends and transactions over time.
+- Graphs visualize transactions over time.
 
 ### Group Management
 
