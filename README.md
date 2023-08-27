@@ -1,31 +1,44 @@
-# Expense Tracker App Documentation
+<br />
+<div align="center">
+
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
+
+<img src="web\public\logo.png" alt="Logo" width="80" height="80">
+
+  <h1 align="center" id="readme-top">CashFlow</h3>
+
+  <p align="center">
+    CashFlow is an expense tracker app designed to help individuals manage their expenses and financial activities effectively. This documentation provides an overview of the app's features, setup instructions, usage guidelines, API documentation, deployment process, and more.
+  </p>
+</div>
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Setup](#setup)
+1. [Setup](#setup)
    - [Frontend Setup](#frontend-setup)
    - [Backend Setup](#backend-setup)
    - [Database Setup](#database-setup)
-3. [Features and Usage](#features-and-usage)
+2. [Features and Usage](#features-and-usage)
    - [User Authentication](#user-authentication)
    - [Dashboard](#dashboard)
    - [Group Management](#group-management)
    - [Budgeting](#budgeting)
    - [Transaction History](#transaction-history)
    - [Analytics](#analytics)
-4. [API Documentation](#api-documentation)
-5. [Deployment](#deployment)
+3. [API Documentation](#api-documentation)
+4. [Deployment](#deployment)
    - [Frontend Deployment](#frontend-deployment)
    - [Backend Deployment](#backend-deployment)
-6. [Testing](#testing)
-7. [Troubleshooting](#troubleshooting)
-8. [Contributing](#contributing)
-9. [License](#license)
-
-## Introduction
-
-The Expense Tracker App is designed to help individuals manage their expenses and financial activities effectively. This documentation provides an overview of the app's features, setup instructions, usage guidelines, API documentation, deployment process, and more.
+5. [Testing](#testing)
+6. [Troubleshooting](#troubleshooting)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 ## Setup
 
@@ -96,4 +109,6 @@ The Expense Tracker App is designed to help individuals manage their expenses an
 
 ## License
 
-This project is licensed under the [MIT License](license.md).
+This project is licensed under the [MIT License](LICENSE).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
