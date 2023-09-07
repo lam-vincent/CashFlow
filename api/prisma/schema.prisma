@@ -8,12 +8,14 @@ datasource db {
 }
 
 model UserDebt {
-  id         Int   @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   amount     Float
   debtorId   Int
   creditorId Int
-  debtor     User  @relation("Debtor", fields: [debtorId], references: [id])
-  creditor   User  @relation("Creditor", fields: [creditorId], references: [id])
+  debtor     User     @relation("Debtor", fields: [debtorId], references: [id])
+  creditor   User     @relation("Creditor", fields: [creditorId], references: [id])
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
 }
 
 model User {
@@ -31,6 +33,8 @@ model User {
   customCategories UserCategory[]
   userDebtor       UserDebt[]     @relation("Debtor")
   userCreditor     UserDebt[]     @relation("Creditor")
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
 }
 
 model Transaction {
@@ -47,6 +51,8 @@ model Transaction {
   user           User          @relation(fields: [userId], references: [id])
   friend         Friend?       @relation(fields: [friendId], references: [id])
   UserCategory   UserCategory? @relation(fields: [userCategoryId], references: [id])
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
 }
 
 model Budget {
@@ -56,13 +62,18 @@ model Budget {
   categoryId Int
   user       User     @relation(fields: [userId], references: [id])
   category   Category @relation(fields: [categoryId], references: [id])
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
 }
 
 model Group {
-  id      Int      @id @default(autoincrement())
-  name    String
-  members User[]
-  friends Friend[]
+  id          Int      @id @default(autoincrement())
+  name        String
+  inviteToken String?
+  members     User[]
+  friends     Friend[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
 
 model Friend {
@@ -74,6 +85,8 @@ model Friend {
   group        Group         @relation(fields: [groupId], references: [id])
   debtToFriend Float         @default(0)
   transactions Transaction[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
 }
 
 model Category {
@@ -82,6 +95,8 @@ model Category {
   imageUrl     String
   transactions Transaction[]
   budgets      Budget[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
 }
 
 model UserCategory {
@@ -90,4 +105,6 @@ model UserCategory {
   userId       Int
   user         User          @relation(fields: [userId], references: [id])
   transactions Transaction[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
 }
