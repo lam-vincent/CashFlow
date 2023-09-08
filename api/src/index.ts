@@ -15,10 +15,6 @@ app.use("/api/auth", authRoutes);
 
 app.use(authMiddleware);
 
-app.get("/", async (req, res) => {
-  res.send("Express + TypeScript Server");
-});
-
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
 });

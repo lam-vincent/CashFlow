@@ -11,7 +11,7 @@ const prisma = new PrismaClient();
 const router = express.Router();
 
 router.post("/register", async (req: Request, res: Response) => {
-  const { username, password } = req.body;
+  const { username, email, password } = req.body;
 
   try {
     // Check if the username is already taken
@@ -27,6 +27,7 @@ router.post("/register", async (req: Request, res: Response) => {
     const newUser = await prisma.user.create({
       data: {
         username,
+        email,
         password: hashedPassword,
       },
     });
