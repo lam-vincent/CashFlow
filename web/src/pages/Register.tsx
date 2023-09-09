@@ -4,9 +4,17 @@ const Register: React.FC = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState(""); // Step 1
 
   const handleRegister = () => {
-    // Perform registration logic here
+    // Perform registration logic here, including password validation
+    if (password !== confirmPassword) {
+      // Passwords don't match, handle the error (e.g., show a message)
+      console.log("Passwords do not match");
+      return;
+    }
+
+    // Continue with registration logic
     console.log(
       "Registering with username:",
       username,
@@ -39,6 +47,13 @@ const Register: React.FC = () => {
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        className="px-2 py-1 border rounded mb-2"
+      />
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        value={confirmPassword}
+        onChange={(e) => setConfirmPassword(e.target.value)}
         className="px-2 py-1 border rounded mb-2"
       />
       <button
