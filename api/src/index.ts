@@ -11,9 +11,9 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/auth", authRoutes);
-
 app.use(authMiddleware);
+
+app.use("/api/auth", authRoutes);
 
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
