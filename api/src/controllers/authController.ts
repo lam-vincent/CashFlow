@@ -11,7 +11,7 @@ const prisma = new PrismaClient();
 const router = express.Router();
 
 router.post("/register", async (req: Request, res: Response) => {
-  const { username, password } = req.body;
+  const { username, email, password } = req.body;
 
   try {
     // Check if the username is already taken
@@ -27,6 +27,7 @@ router.post("/register", async (req: Request, res: Response) => {
     const newUser = await prisma.user.create({
       data: {
         username,
+        email,
         password: hashedPassword,
       },
     });
@@ -34,25 +35,6 @@ router.post("/register", async (req: Request, res: Response) => {
     // Generate JWT token
     const token = jwt.sign({ userId: newUser.id }, secretKey, {
       expiresIn: "1h",
-    });
-
-    await prisma.taskList.create({
-      data: {
-        title: "Todo",
-        userId: newUser.id,
-      },
-    });
-    await prisma.taskList.create({
-      data: {
-        title: "In progress",
-        userId: newUser.id,
-      },
-    });
-    await prisma.taskList.create({
-      data: {
-        title: "Done",
-        userId: newUser.id,
-      },
     });
 
     res.status(201).json({ message: "User registered successfully", token });
