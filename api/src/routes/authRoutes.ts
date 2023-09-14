@@ -5,6 +5,8 @@ import register from "../controllers/authController";
 
 const router = express.Router();
 
+console.log(body);
+
 // Define routes for user registration and login
 router.post(
   "/register",
