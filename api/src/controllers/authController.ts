@@ -13,8 +13,6 @@ const router = express.Router();
 router.post("/register", async (req: Request, res: Response) => {
   const { username, email, password } = req.body;
 
-  console.log("username, email, password: ", username, email, password);
-
   try {
     // Check if the username is already taken
     const existingUser = await prisma.user.findUnique({ where: { username } });
