@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import Layout from "./shared/Layout";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -11,14 +12,16 @@ import Analytics from "./pages/Analytics";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/group" element={<Group />} />
-      <Route path="/budgeting" element={<Budgeting />} />
-      <Route path="/history" element={<History />} />
-      <Route path="/analytics" element={<Analytics />} />
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/group" element={<Group />} />
+        <Route path="/budgeting" element={<Budgeting />} />
+        <Route path="/history" element={<History />} />
+        <Route path="/analytics" element={<Analytics />} />
+      </Route>
     </Routes>
   );
 }
