@@ -8,9 +8,6 @@ const Layout = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
               <Link to="/dashboard">Dashboard</Link>
             </li>
             <li>
@@ -25,12 +22,10 @@ const Layout = () => {
             <li>
               <Link to="/analytics">Analytics</Link>
             </li>
-            {/* Add conditional rendering for authentication status */}
           </ul>
         </nav>
       </header>
       <main>
-        {/* Display page-specific content */}
         <Outlet />
       </main>
       <footer>{/* Footer content */}</footer>
